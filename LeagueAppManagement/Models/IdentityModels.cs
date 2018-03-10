@@ -1,8 +1,9 @@
-﻿using System.Data.Entity;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using LeagueAppManagement.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace LeagueAppManagement.Models
 {
@@ -29,5 +30,7 @@ namespace LeagueAppManagement.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Player> Players { get; set; }
     }
 }
