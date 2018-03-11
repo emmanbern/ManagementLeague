@@ -9,7 +9,7 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
             return View();
         }
 
-        public ActionResult Create()
+        public ActionResult Edit()
         {
             return View();
         }

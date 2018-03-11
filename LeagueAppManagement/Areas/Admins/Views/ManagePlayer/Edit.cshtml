@@ -1,0 +1,27 @@
+﻿
+@section Scripts {
+    @Scripts.Render("~/bundles/admins")
+}
+
+<div class="col-sm-12" ng-controller="editController" ng-init="Init()">
+
+    <form name="form">
+        <div class="form-group">
+            <label for="FirstName">Prenom</label>
+            <input type="text" name="FirstName" ng-model="FirstName" class="form-control" ng-change="Log(form.FirstName.$error)" required>
+            <div ng-messages="form.FirstName.$error" style="color:maroon" role="alert">
+                <div ng-message="required">Ce champs doit être remplis</div>
+             
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="LastName">Nom</label>
+            <input type="text" name="LastName" ng-model="LastName" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber">Numéro</label>
+            <input type="text" name="PhoneNumber" ui-mask="(999) 999-9999" ng-model="PhoneNumber" class="form-control" required>
+        </div>
+    </form>
+
+</div>

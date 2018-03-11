@@ -23,7 +23,10 @@ namespace LeagueAppManagement
                       "~/Scripts/respond.js"));
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js",
+                "~/Scripts/mask.js",
+                "~/Scripts/messages.js",
                 "~/Scripts/leagueApp.js"
+
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -31,7 +34,8 @@ namespace LeagueAppManagement
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/admins").Include(
-                       "~/Areas/Admins/Scripts/listController.js"));
+                       "~/Areas/Admins/Scripts/listController.js",
+                        "~/Areas/Admins/Scripts/editController.js"));
         }
     }
 }

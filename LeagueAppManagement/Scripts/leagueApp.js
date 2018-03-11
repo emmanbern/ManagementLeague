@@ -1,1 +1,1 @@
-﻿var leagueApp = angular.module('leagueApp', []);
+﻿var leagueApp = angular.module('leagueApp', ['ui.mask', 'ngMessages'])
