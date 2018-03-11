@@ -29,6 +29,9 @@ namespace LeagueAppManagement
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/admins").Include(
+                       "~/Areas/Admins/Scripts/listController.js"));
         }
     }
 }

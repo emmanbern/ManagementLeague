@@ -2,5 +2,27 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Ici la liste des joueurs</h1>
+@section Scripts {
+    @Scripts.Render("~/bundles/admins")
+}
+
+<div class="col-sm-12" ng-controller="listController" ng-init="Init()">
+    <h1>Ici la liste des joueurs</h1>
+
+    <hr />
+
+    <table>
+        <tr>
+            <th>Nom {{34 + 44}}</th>
+            <th>Numéro</th>
+            <th>Classement</th>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+
+
 

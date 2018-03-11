@@ -1,1 +1,1 @@
-﻿angular.module('leagueApp', []);
+﻿var leagueApp = angular.module('leagueApp', []);
