@@ -42,10 +42,10 @@ namespace LeagueAppManagement.Migrations
                 var user = new ApplicationUser
                 {
                     UserName = "emmanbern",
-                    Email = "emmanbern@gmail.com"
+                    Email = "emmanbern1@gmail.com"
                 };
 
-                string userPWD = "joueur_69";
+                string userPWD = "Test1234";
 
                 var chkUser = UserManager.Create(user, userPWD);
 
