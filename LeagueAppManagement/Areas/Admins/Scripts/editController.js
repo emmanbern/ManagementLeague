@@ -8,7 +8,7 @@
         $http.post('http://league.local/Api/Player/GetValue', {}).then(function (response) {
             console.log(response);
         });
-        $http.post('http://league.local/Api/Player/GetOtherValue', {
+        $http.post('http://league.local/Api/Player/Create', {
 
         }).then(function (response) {
             console.log(response);
