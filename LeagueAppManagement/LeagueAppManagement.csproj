@@ -200,6 +200,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admins\AdminsAreaRegistration.cs" />
+    <Compile Include="Areas\Admins\Api\PlayerController.cs" />
     <Compile Include="Areas\Admins\Controllers\ManagePlayerController.cs" />
     <Compile Include="Areas\Players\PlayersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -293,7 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admins\Api\" />
     <Folder Include="Areas\Admins\Models\" />
     <Folder Include="Areas\Admins\Views\Shared\" />
     <Folder Include="Areas\Players\Controllers\" />

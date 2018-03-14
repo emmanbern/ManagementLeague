@@ -4,7 +4,8 @@
 }
 
 <div class="col-sm-12" ng-controller="editController" ng-init="Init()">
-
+    <h1>Enregistrement d'un nouveau joueur</h1>
+    <hr />
     <form name="form">
         <div class="form-group">
             <label for="FirstName">Prenom</label>
@@ -22,6 +23,7 @@
             <label for="PhoneNumber">Numéro</label>
             <input type="text" name="PhoneNumber" ui-mask="(999) 999-9999" ng-model="PhoneNumber" class="form-control" required>
         </div>
+        <button class="btn btn-info" ng-click="Submit()">Sauvegarder</button>
     </form>
 
 </div>
