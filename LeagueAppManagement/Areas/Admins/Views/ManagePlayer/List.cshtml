@@ -1,21 +1,23 @@
-﻿
+﻿@model IEnumerable<PlayerViewModel>
 @section Scripts {
     @Scripts.Render("~/bundles/admins")
 }
 
-<div class="col-sm-12" ng-controller="listController" ng-init="Init()">
+<div class="col-sm-12" ng-controller="listController" ng-init="Init('@Model.Serialize()')">
     <h1>Ici la liste des joueurs</h1>
     @Html.ActionLink("Ajouter un joueur", "Edit", "ManagePlayer", new { area = "Admins" }, new { @class = "btn btn-default"})
     <hr />
 
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Nom</th>
             <th>Numéro</th>
             <th>Classement</th>
         </tr>
-        <tr>
-            <td></td>
+        <tr ng-repeat="Player in Players">
+            <td>{{Player.FullName}}</td>
+            <td>{{Player.PhoneNumber}}</td>
+            <td>{{Player.Grade}}</td>
         </tr>
     </table>
 </div>

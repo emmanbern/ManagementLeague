@@ -1,9 +1,8 @@
 ﻿leagueApp.controller('listController', ['$scope', function ($scope) {
 
-    $scope.Init = function () {
-        $scope.Test = {
-            Nom: "Toto"
-        };
+    $scope.Tests = {};
+    $scope.Init = function (model) {
+        $scope.Players = JSON.parse(model);
         console.log($scope);
     };
 

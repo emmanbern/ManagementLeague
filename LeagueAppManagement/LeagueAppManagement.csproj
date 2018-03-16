@@ -201,6 +201,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admins\AdminsAreaRegistration.cs" />
     <Compile Include="Areas\Admins\Controllers\ManagePlayerController.cs" />
+    <Compile Include="Areas\Admins\Models\PlayerListViewModel.cs" />
+    <Compile Include="Areas\Admins\Models\PlayerViewModel.cs" />
     <Compile Include="Areas\Players\Api\PlayerController.cs" />
     <Compile Include="Areas\Players\PlayersAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -211,6 +213,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Migrations\201803101941480_AddPlayerTable.cs" />
     <Compile Include="Migrations\201803101941480_AddPlayerTable.Designer.cs">
       <DependentUpon>201803101941480_AddPlayerTable.cs</DependentUpon>
@@ -297,7 +300,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admins\Api\" />
-    <Folder Include="Areas\Admins\Models\" />
     <Folder Include="Areas\Admins\Views\Shared\" />
     <Folder Include="Areas\Players\Controllers\" />
     <Folder Include="Areas\Players\Models\" />
