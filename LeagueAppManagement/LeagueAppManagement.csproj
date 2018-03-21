@@ -210,6 +210,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Data\GradeEnum.cs" />
     <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\Team.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -223,6 +224,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TeamCreator.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
