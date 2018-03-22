@@ -26,9 +26,17 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
             return View(players);
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(int? id)
         {
-            return View();
+            var player = _dbContext.Players.Where(f => f.Id == id).Select(s => new PlayerViewModel
+            {
+                FirstName = s.FirstName,
+                LastName = s.LastName,
+                PhoneNumber = s.PhoneNumber,
+                GradeEnum = s.Grade
+            }).FirstOrDefault();
+
+            return View(player != null ? player : new PlayerViewModel());
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using LeagueAppManagement.Data;
+﻿using LeagueAppManagement.Areas.Players.Models;
+using LeagueAppManagement.Data;
 using LeagueAppManagement.Models;
 using System.Web.Http;
 
@@ -21,14 +22,15 @@ namespace LeagueAppManagement.Areas.Players
         }
 
         [HttpPost]
-        public IHttpActionResult Create()
+        public IHttpActionResult Create(PlayerModel player)
         {
+
             _dbContext.Players.Add(new Player
             {
-                FirstName = "Emmanuel",
-                LastName = "Genest",
-                PhoneNumber = "819-888-3344",
-                Grade = GradeEnum.A,
+                FirstName = player.FirstName,
+                LastName = player.LastName,
+                PhoneNumber = player.PhoneNumber,
+                Grade = player.Grade,
             });
 
             _dbContext.SaveChanges();

@@ -5,7 +5,7 @@
 
 <div class="col-sm-12" ng-controller="listController" ng-init="Init('@Model.Serialize()')">
     <h1>Ici la liste des joueurs</h1>
-    @Html.ActionLink("Ajouter un joueur", "Edit", "ManagePlayer", new { area = "Admins" }, new { @class = "btn btn-default"})
+    @Html.ActionLink("Ajouter un joueur", "Edit", "ManagePlayer", new { area = "Admins" }, new { @class = "btn btn-default" })
     <hr />
 
     <table class="table table-striped">

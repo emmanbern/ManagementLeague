@@ -1,5 +1,7 @@
 ﻿using LeagueAppManagement.Data;
+using LeagueAppManagement.Services;
 using System;
+using System.Collections.Generic;
 
 namespace LeagueAppManagement.Areas.Admins.Models
 {
@@ -23,6 +25,15 @@ namespace LeagueAppManagement.Areas.Admins.Models
             {
                 return GradeEnum.ToString();
 
+            }
+        }
+
+        public List<KeyValuePair<string, int>> EnumList
+        {
+            get
+            {
+                var _service = new EnumerationService();
+                return _service.GetEnumerationValues<GradeEnum>();
             }
         }
     }

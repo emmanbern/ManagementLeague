@@ -1,21 +1,22 @@
-﻿leagueApp.controller('editController', ['$scope', '$http', function ($scope, $http) {
+﻿leagueApp.controller('editController', ['$scope', '$http','$location', function ($scope, $http, $location) {
 
-    $scope.Init = function () {
-        $scope.Test = {
-            Nom: "Toto"
-        };
-        console.log($scope);
-        $http.post('http://league.local/Api/Player/GetValue', {}).then(function (response) {
-            console.log(response);
-        });
-        $http.post('http://league.local/Api/Player/Create', {
-
-        }).then(function (response) {
-            console.log(response);
-        });
+    $scope.Init = function (model) {
+        $scope.Player = JSON.parse(model);
     };
 
-    $scope.Log = function (value) {
+    $scope.Submit = function (url) {
+        var number = $scope.Player.PhoneNumber;
+        number = number.split("-").join("");
+        var formatedPhoneNumer = number.substring(0, 3) + "-" + number.substring(3, 6) + "-" + number.substring(6, number.length);
+
+        $http.post('http://league.local/Api/Player/Create', {
+            FirstName: $scope.Player.FirstName,
+            LastName: $scope.Player.LastName,
+            Grade: $scope.Player.GradeEnum,
+            PhoneNumber: formatedPhoneNumer
+        }).then(function (response) {
+            window.location = "http://league.local" + url;
+        });
        
     };
 }]);
