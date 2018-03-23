@@ -13,11 +13,13 @@
             <th>Nom</th>
             <th>Numéro</th>
             <th>Classement</th>
+            <th>Action</th>
         </tr>
         <tr ng-repeat="Player in Players">
             <td>{{Player.FullName}}</td>
             <td>{{Player.PhoneNumber}}</td>
             <td>{{Player.Grade}}</td>
+            <td> <button ng-click="Redirect('@Url.Action("Edit", "ManagePlayer", new { area = "Admins" })', Player.Guid)" class="btn btn-info">Modifier</button>  </td>
         </tr>
     </table>
 </div>

@@ -3,7 +3,7 @@ namespace LeagueAppManagement.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddPlayerTable : DbMigration
+    public partial class Version_01 : DbMigration
     {
         public override void Up()
         {
@@ -12,12 +12,26 @@ namespace LeagueAppManagement.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        TeamId = c.Int(),
                         FirstName = c.String(),
                         LastName = c.String(),
                         PhoneNumber = c.String(),
                         Grade = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Teams", t => t.TeamId)
+                .Index(t => t.TeamId);
+            
+            CreateTable(
+                "dbo.Teams",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Guid = c.Guid(nullable: false, identity: true),
+                    })
+                .PrimaryKey(t => t.Id)
+                .Index(t => t.Guid);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -95,17 +109,21 @@ namespace LeagueAppManagement.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Players", "TeamId", "dbo.Teams");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Teams", new[] { "Guid" });
+            DropIndex("dbo.Players", new[] { "TeamId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Teams");
             DropTable("dbo.Players");
         }
     }

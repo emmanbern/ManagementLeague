@@ -4,4 +4,10 @@
     $scope.Init = function (model) {
         $scope.Players = JSON.parse(model);
     };
+
+    $scope.Redirect = function (url, guid) {
+        console.log(url);
+        console.log(guid);
+        window.localion = url + "/" + guid;
+    };
 }]);

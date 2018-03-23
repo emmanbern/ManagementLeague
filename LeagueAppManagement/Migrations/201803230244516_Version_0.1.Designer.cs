@@ -7,13 +7,13 @@ namespace LeagueAppManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddPlayerTable : IMigrationMetadata
+    public sealed partial class Version_01 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddPlayerTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Version_01));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803101941480_AddPlayerTable"; }
+            get { return "201803230244516_Version_0.1"; }
         }
         
         string IMigrationMetadata.Source

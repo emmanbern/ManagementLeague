@@ -7,7 +7,7 @@ namespace LeagueAppManagement.Data
     public abstract class BaseEntity
     {
         [Key]
-        [Index, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Index, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
