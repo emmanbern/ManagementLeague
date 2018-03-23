@@ -221,6 +221,10 @@
     <Compile Include="Migrations\201803230244516_Version_0.1.Designer.cs">
       <DependentUpon>201803230244516_Version_0.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803230257346_addGuid.cs" />
+    <Compile Include="Migrations\201803230257346_addGuid.Designer.cs">
+      <DependentUpon>201803230257346_addGuid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -326,6 +330,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803230244516_Version_0.1.resx">
       <DependentUpon>201803230244516_Version_0.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803230257346_addGuid.resx">
+      <DependentUpon>201803230257346_addGuid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

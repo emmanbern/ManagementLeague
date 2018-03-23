@@ -1,13 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LeagueAppManagement.Data
 {
     public class Player
     {
         public int Id { get; set; }
-
-        //[Index, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //public Guid Guid { get; set; }
+        [Index]
+        public Guid Guid { get; set; }
         [ForeignKey(nameof(Team))]
         public int? TeamId { get; set; }
         public string FirstName { get; set; }

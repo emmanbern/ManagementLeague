@@ -1,5 +1,6 @@
 ﻿using LeagueAppManagement.Areas.Admins.Models;
 using LeagueAppManagement.Models;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -20,20 +21,22 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
                 FirstName = s.FirstName,
                 LastName = s.LastName,
                 GradeEnum = s.Grade,
-                PhoneNumber = s.PhoneNumber
+                PhoneNumber = s.PhoneNumber,
+                Guid = s.Guid
             }).ToList();
 
             return View(players);
         }
 
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(Guid? id)
         {
-            var player = _dbContext.Players.Where(f => f.Id == id).Select(s => new PlayerViewModel
+            var player = _dbContext.Players.Where(f => f.Guid == id).Select(s => new PlayerViewModel
             {
                 FirstName = s.FirstName,
                 LastName = s.LastName,
                 PhoneNumber = s.PhoneNumber,
-                GradeEnum = s.Grade
+                GradeEnum = s.Grade,
+                Guid = s.Guid
             }).FirstOrDefault();
 
             return View(player ?? new PlayerViewModel());

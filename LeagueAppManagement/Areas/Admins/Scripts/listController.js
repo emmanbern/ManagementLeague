@@ -1,13 +1,13 @@
-﻿leagueApp.controller('listController', ['$scope', function ($scope) {
+﻿leagueApp.controller('listController', ['$scope','$location', function ($scope, $location) {
 
     $scope.Tests = {};
     $scope.Init = function (model) {
         $scope.Players = JSON.parse(model);
+        console.log($scope);
     };
 
     $scope.Redirect = function (url, guid) {
-        console.log(url);
-        console.log(guid);
-        window.localion = url + "/" + guid;
+       
+        window.location = "http://league.local" + url + "/" + guid;
     };
 }]);

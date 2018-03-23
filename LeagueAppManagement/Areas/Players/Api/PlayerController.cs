@@ -1,6 +1,8 @@
 ﻿using LeagueAppManagement.Areas.Players.Models;
 using LeagueAppManagement.Data;
 using LeagueAppManagement.Models;
+using System;
+using System.Linq;
 using System.Web.Http;
 
 namespace LeagueAppManagement.Areas.Players
@@ -30,7 +32,8 @@ namespace LeagueAppManagement.Areas.Players
                 FirstName = player.FirstName,
                 LastName = player.LastName,
                 PhoneNumber = player.PhoneNumber,
-                Grade = player.Grade
+                Grade = player.Grade,
+                Guid = Guid.NewGuid()
             });
 
             _dbContext.SaveChanges();
@@ -40,19 +43,19 @@ namespace LeagueAppManagement.Areas.Players
         [HttpPost]
         public IHttpActionResult Update(PlayerModel player)
         {
-            //var dbPlayer = _dbContext.Players.FirstOrDefault(f => f.Guid == player.Guid.Value);
+            var dbPlayer = _dbContext.Players.FirstOrDefault(f => f.Guid == player.Guid.Value);
 
-            //if (dbPlayer == null)
-            //{
-            //    return NotFound();
-            //}
+            if (dbPlayer == null)
+            {
+                return NotFound();
+            }
 
-            //dbPlayer.FirstName = player.FirstName;
-            //dbPlayer.LastName = player.LastName;
-            //dbPlayer.PhoneNumber = dbPlayer.PhoneNumber;
-            //dbPlayer.Grade = dbPlayer.Grade;
+            dbPlayer.FirstName = player.FirstName;
+            dbPlayer.LastName = player.LastName;
+            dbPlayer.PhoneNumber = dbPlayer.PhoneNumber;
+            dbPlayer.Grade = dbPlayer.Grade;
 
-            //_dbContext.SaveChanges();
+            _dbContext.SaveChanges();
 
             return Ok();
         }
