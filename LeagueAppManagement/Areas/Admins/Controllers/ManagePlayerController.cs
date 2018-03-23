@@ -36,7 +36,7 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
                 GradeEnum = s.Grade
             }).FirstOrDefault();
 
-            return View(player != null ? player : new PlayerViewModel());
+            return View(player ?? new PlayerViewModel());
         }
 
     }

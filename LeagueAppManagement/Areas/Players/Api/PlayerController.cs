@@ -36,5 +36,11 @@ namespace LeagueAppManagement.Areas.Players
             _dbContext.SaveChanges();
             return Ok();
         }
+
+        [HttpPost]
+        public IHttpActionResult Update(PlayerModel player)
+        {
+            return Ok();
+        }
     }
 }

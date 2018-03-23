@@ -209,6 +209,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Data\BaseEntity.cs" />
     <Compile Include="Data\GradeEnum.cs" />
     <Compile Include="Data\Player.cs" />
     <Compile Include="Data\Team.cs" />
@@ -219,6 +220,14 @@
     <Compile Include="Migrations\201803101941480_AddPlayerTable.cs" />
     <Compile Include="Migrations\201803101941480_AddPlayerTable.Designer.cs">
       <DependentUpon>201803101941480_AddPlayerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803230123348_addBaseEntity.cs" />
+    <Compile Include="Migrations\201803230123348_addBaseEntity.Designer.cs">
+      <DependentUpon>201803230123348_addBaseEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803230126424_addTeams.cs" />
+    <Compile Include="Migrations\201803230126424_addTeams.Designer.cs">
+      <DependentUpon>201803230126424_addTeams.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -325,6 +334,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803101941480_AddPlayerTable.resx">
       <DependentUpon>201803101941480_AddPlayerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803230123348_addBaseEntity.resx">
+      <DependentUpon>201803230123348_addBaseEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803230126424_addTeams.resx">
+      <DependentUpon>201803230126424_addTeams.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

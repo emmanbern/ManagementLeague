@@ -8,7 +8,6 @@ namespace LeagueAppManagement.Helpers
         public static string Serialize<T>(this T obj)
         {
             return new JavaScriptSerializer().Serialize(obj);
-
         }
 
         public static string Serialize<T>(this IEnumerable<T> list)

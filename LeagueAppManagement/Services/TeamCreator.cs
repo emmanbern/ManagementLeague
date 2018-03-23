@@ -9,15 +9,11 @@ namespace LeagueAppManagement.Services
     {
         public IEnumerable<Team> CreateTeams(IEnumerable<Player> players, IEnumerable<Team> teams)
         {
-            var aPlayers = players.Where(w => w.Grade == GradeEnum.A).ToList();
-            var bPlayers = players.Where(w => w.Grade == GradeEnum.B).ToList();
-            var cPlayers = players.Where(w => w.Grade == GradeEnum.C).ToList();
-
-            var allPlayers = new List<List<Player>> {
-                aPlayers,
-                bPlayers,
-                cPlayers
-            };
+            var allPlayers = new List<List<Player>>();
+            foreach (GradeEnum grade in Enum.GetValues(typeof(GradeEnum)))
+            {
+                allPlayers.Add(players.Where(w => w.Grade == grade).ToList());
+            }
 
             var teamA = teams.First();
             var teamB = teams.Last();

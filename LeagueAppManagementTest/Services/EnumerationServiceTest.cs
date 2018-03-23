@@ -23,7 +23,7 @@ namespace LeagueAppManagementTest.Services
 
             Assert.AreEqual("A", result.First());
             Assert.AreEqual("B", result.ElementAt(1));
-            Assert.AreEqual("C", result.Last());
+            Assert.AreEqual("D", result.Last());
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace LeagueAppManagementTest.Services
         {
             var result = _service.GetEnumerationValues<GradeEnum>();
 
-            Assert.AreEqual(3, result.Count);
+            Assert.AreEqual(4, result.Count);
             Assert.AreEqual("A", result.First().Key);
             Assert.AreEqual(1, result.First().Value);
         }
