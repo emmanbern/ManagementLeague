@@ -22,7 +22,8 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
                 LastName = s.LastName,
                 GradeEnum = s.Grade,
                 PhoneNumber = s.PhoneNumber,
-                Guid = s.Guid
+                Guid = s.Guid,
+                PositionEnum = s.Position
             }).ToList();
 
             return View(players);
@@ -36,7 +37,8 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
                 LastName = s.LastName,
                 PhoneNumber = s.PhoneNumber,
                 GradeEnum = s.Grade,
-                Guid = s.Guid
+                Guid = s.Guid,
+                PositionEnum = s.Position
             }).FirstOrDefault();
 
             return View(player ?? new PlayerViewModel());

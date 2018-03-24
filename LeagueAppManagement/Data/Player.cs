@@ -13,6 +13,7 @@ namespace LeagueAppManagement.Data
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
+        public PositionEnum Position { get; set; }
         public GradeEnum Grade { get; set; }
         public Team Team { get; set; }
     }

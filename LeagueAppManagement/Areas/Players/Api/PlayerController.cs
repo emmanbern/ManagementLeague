@@ -12,18 +12,6 @@ namespace LeagueAppManagement.Areas.Players
         private ApplicationDbContext _dbContext = new ApplicationDbContext();
 
         [HttpPost]
-        public IHttpActionResult GetValue()
-        {
-            return Ok(new { info = "Test" });
-        }
-
-        [HttpPost]
-        public IHttpActionResult GetOtherValue()
-        {
-            return Ok(new { info = "Test2" });
-        }
-
-        [HttpPost]
         public IHttpActionResult Create(PlayerModel player)
         {
 
@@ -33,6 +21,7 @@ namespace LeagueAppManagement.Areas.Players
                 LastName = player.LastName,
                 PhoneNumber = player.PhoneNumber,
                 Grade = player.Grade,
+                Position = player.Position,
                 Guid = Guid.NewGuid()
             });
 
@@ -53,7 +42,8 @@ namespace LeagueAppManagement.Areas.Players
             dbPlayer.FirstName = player.FirstName;
             dbPlayer.LastName = player.LastName;
             dbPlayer.PhoneNumber = dbPlayer.PhoneNumber;
-            dbPlayer.Grade = dbPlayer.Grade;
+            dbPlayer.Grade = player.Grade;
+            dbPlayer.Position = player.Position;
 
             _dbContext.SaveChanges();
 

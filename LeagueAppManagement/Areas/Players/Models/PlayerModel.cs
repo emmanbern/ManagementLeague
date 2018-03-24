@@ -10,5 +10,6 @@ namespace LeagueAppManagement.Areas.Players.Models
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public GradeEnum Grade { get; set; }
+        public PositionEnum Position { get; set; }
     }
 }

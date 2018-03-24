@@ -1,9 +1,5 @@
-﻿using System;
+﻿using LeagueAppManagement.Data;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeagueAppManagement.Data;
 
 namespace LeagueAppManagementTest.Services
 {
@@ -23,7 +19,7 @@ namespace LeagueAppManagementTest.Services
                 {
                      FirstName = "Maxime",
                     LastName = "Frechette",
-                    Grade = GradeEnum.A 
+                    Grade = GradeEnum.A
                 },
                 new Player
                 {
@@ -47,7 +43,7 @@ namespace LeagueAppManagementTest.Services
                 {
                      FirstName = "Alex",
                     LastName = "Roumain",
-                    Grade = GradeEnum.C 
+                    Grade = GradeEnum.C
                 },
                  new Player
                 {
@@ -65,55 +61,49 @@ namespace LeagueAppManagementTest.Services
                  {
                     FirstName = "Vincent",
                     LastName = "Picard",
-                    Grade = GradeEnum.D 
+                    Grade = GradeEnum.D
                  },
                  new Player
                  {
                     FirstName = "Carl",
                     LastName = "Filion",
-                    Grade = GradeEnum.B 
+                    Grade = GradeEnum.B
                  },
                  new Player
                  {
                     FirstName = "Eric",
                     LastName = "Beauregard",
-                    Grade = GradeEnum.B 
+                    Grade = GradeEnum.B
                  },
                 new Player
                  {
                     FirstName = "Richard",
                     LastName = "Perrot",
-                    Grade = GradeEnum.C 
+                    Grade = GradeEnum.C
                  },
                 new Player
                  {
                     FirstName = "Dominique",
                     LastName = "Body",
-                    Grade = GradeEnum.A 
+                    Grade = GradeEnum.A
                  },
                  new Player
                  {
                     FirstName = "David",
                     LastName = "Goalie",
-                    Grade = GradeEnum.C 
-                 },
-                  new Player
-                 {
-                    FirstName = "Ami",
-                    LastName = "Gagnon",
-                    Grade = GradeEnum.B
+                    Grade = GradeEnum.C
                  },
                 new Player
                  {
                     FirstName = "Sebastien",
                     LastName = "Ottawa",
-                    Grade = GradeEnum.B 
+                    Grade = GradeEnum.B
                  },
                 new Player
                  {
                     FirstName = "Pierre Luc",
                     LastName = "Hori",
-                    Grade = GradeEnum.A 
+                    Grade = GradeEnum.A
                  }//,
                 //new Player
                 //{
@@ -121,6 +111,12 @@ namespace LeagueAppManagementTest.Services
                 //    LastName = "Gagnon",
                 //    Grade = GradeEnum.A
                 //}
+                // new Player
+                 //{
+                 //   FirstName = "Ami",
+                 //   LastName = "Gagnon",
+                 //   Grade = GradeEnum.B
+                 //},
             };
         }
     }

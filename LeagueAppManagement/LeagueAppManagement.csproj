@@ -212,6 +212,7 @@
     <Compile Include="Data\BaseEntity.cs" />
     <Compile Include="Data\GradeEnum.cs" />
     <Compile Include="Data\Player.cs" />
+    <Compile Include="Data\PositionEnum.cs" />
     <Compile Include="Data\Team.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -224,6 +225,10 @@
     <Compile Include="Migrations\201803230257346_addGuid.cs" />
     <Compile Include="Migrations\201803230257346_addGuid.Designer.cs">
       <DependentUpon>201803230257346_addGuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803241636179_AddPositionToPlayers.cs" />
+    <Compile Include="Migrations\201803241636179_AddPositionToPlayers.Designer.cs">
+      <DependentUpon>201803241636179_AddPositionToPlayers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -333,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803230257346_addGuid.resx">
       <DependentUpon>201803230257346_addGuid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803241636179_AddPositionToPlayers.resx">
+      <DependentUpon>201803241636179_AddPositionToPlayers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
