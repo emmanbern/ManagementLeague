@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\DataHelper.cs" />
     <Compile Include="Services\EnumerationServiceTest.cs" />
     <Compile Include="Services\TeamCreatorServiceTest.cs" />
     <Compile Include="UnitTest1.cs" />

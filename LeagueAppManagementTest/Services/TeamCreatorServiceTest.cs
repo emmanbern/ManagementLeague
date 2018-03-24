@@ -198,13 +198,12 @@ namespace LeagueAppManagementTest.Services
                     Grade = GradeEnum.A
                },
             };
-
             var players = new List<Player>();
             players.AddRange(cPlayers);
             players.AddRange(bPlayers);
             players.AddRange(aPlayers);
 
-            var result = _service.CreateTeams(players, teams);
+            var result = _service.CreateTeams(DataHelper.Players(), teams);
 
             Assert.AreEqual(result.First().Players.Count, result.Last().Players.Count);
 
