@@ -208,6 +208,9 @@
     <Compile Include="Areas\Players\Api\PlayerController.cs" />
     <Compile Include="Areas\Players\Models\PlayerModel.cs" />
     <Compile Include="Areas\Players\PlayersAreaRegistration.cs" />
+    <Compile Include="Areas\Teams\Api\TeamController.cs" />
+    <Compile Include="Areas\Teams\Models\CreateTeamModel.cs" />
+    <Compile Include="Areas\Teams\TeamsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -265,6 +268,7 @@
     <Content Include="Areas\Admins\Views\ManageTeam\List.cshtml" />
     <Content Include="Areas\Admins\Views\ManageTeam\Main.cshtml" />
     <Content Include="Areas\Admins\Views\ManageTeam\MixTeam.cshtml" />
+    <Content Include="Areas\Teams\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -323,6 +327,8 @@
     <Folder Include="Areas\Admins\Views\Shared\" />
     <Folder Include="Areas\Players\Controllers\" />
     <Folder Include="Areas\Players\Views\Shared\" />
+    <Folder Include="Areas\Teams\Controllers\" />
+    <Folder Include="Areas\Teams\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
