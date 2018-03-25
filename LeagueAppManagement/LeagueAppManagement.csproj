@@ -202,6 +202,7 @@
     <Compile Include="Areas\Admins\AdminsAreaRegistration.cs" />
     <Compile Include="Areas\Admins\Controllers\ManagePlayerController.cs" />
     <Compile Include="Areas\Admins\Controllers\ManageTeamController.cs" />
+    <Compile Include="Areas\Admins\Models\MixTeamViewModel.cs" />
     <Compile Include="Areas\Admins\Models\PlayerListViewModel.cs" />
     <Compile Include="Areas\Admins\Models\PlayerViewModel.cs" />
     <Compile Include="Areas\Players\Api\PlayerController.cs" />
@@ -241,8 +242,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Admins\Scripts\editController.js" />
-    <Content Include="Areas\Admins\Scripts\listController.js" />
+    <Content Include="Areas\Admins\Scripts\ManagePlayer\editController.js" />
+    <Content Include="Areas\Admins\Scripts\ManagePlayer\listController.js" />
+    <Content Include="Areas\Admins\Scripts\ManageTeam\MixTeamController.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -261,6 +263,8 @@
     <Content Include="Areas\Admins\Views\ManagePlayer\Edit.cshtml" />
     <Content Include="Areas\Admins\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admins\Views\ManageTeam\List.cshtml" />
+    <Content Include="Areas\Admins\Views\ManageTeam\Main.cshtml" />
+    <Content Include="Areas\Admins\Views\ManageTeam\MixTeam.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

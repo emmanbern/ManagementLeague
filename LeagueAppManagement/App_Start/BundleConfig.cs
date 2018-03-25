@@ -33,9 +33,12 @@ namespace LeagueAppManagement
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/admins").Include(
-                       "~/Areas/Admins/Scripts/listController.js",
-                        "~/Areas/Admins/Scripts/editController.js"));
+            bundles.Add(new ScriptBundle("~/bundles/admins/Players").Include(
+                       "~/Areas/Admins/Scripts/ManagePlayer/listController.js",
+                        "~/Areas/Admins/Scripts/ManagePlayer/editController.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/admins/Teams").Include(
+                      "~/Areas/Admins/Scripts/ManageTeam/mixTeamController.js"));
         }
     }
 }

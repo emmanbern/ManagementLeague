@@ -13,6 +13,28 @@ namespace LeagueAppManagement.Areas.Admins.Controllers
         {
             _dbContext = new ApplicationDbContext();
         }
+
+        public ActionResult Main()
+        {
+            return View();
+        }
+
+        public ActionResult MixTeam()
+        {
+            var mixTeamViewModel = new MixTeamViewModel();
+            mixTeamViewModel.Players = _dbContext.Players.Select(s => new PlayerViewModel
+            {
+                FirstName = s.FirstName,
+                GradeEnum = s.Grade,
+                LastName = s.LastName,
+                Guid = s.Guid,
+                PhoneNumber = s.PhoneNumber,
+                PositionEnum = s.Position
+            }).ToList();
+
+            return View(mixTeamViewModel);
+        }
+
         public ActionResult List()
         {
             var players = _dbContext.Players.Select(s => new PlayerViewModel

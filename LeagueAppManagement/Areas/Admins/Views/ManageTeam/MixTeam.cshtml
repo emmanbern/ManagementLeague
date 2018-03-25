@@ -1,0 +1,18 @@
+﻿@model MixTeamViewModel
+
+@section Scripts {
+    @Scripts.Render("~/bundles/admins/Teams")
+}
+
+<h1>Mélangeur d'équipe</h1>
+
+<div class="row" ng-controller="MixTeamController" ng-init="Init('@Model.Serialize()')">
+    <div class="col-sm-6">
+        <h3>Liste des joueurs disponible</h3>
+        <p ng-repeat="Player in Players"> <button class="btn btn-default {{Player.Guid}}" ng-click="TogglePalyerToList(Player)"> {{Player.FullName}}</button></p>
+    </div>
+    <div class="col-sm-6">
+        <h3>Joueurs sélectionné ({{SelectedCount}})</h3>
+        <p class="text-center" ng-repeat="Player in SelectedPlayers"> {{Player.FullName}}</p>
+    </div>
+</div>

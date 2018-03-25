@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<PlayerViewModel>
 @section Scripts {
-    @Scripts.Render("~/bundles/admins")
+    @Scripts.Render("~/bundles/admins/Players")
 }
 
 <div class="col-sm-12" ng-controller="listController" ng-init="Init('@Model.Serialize()')">
