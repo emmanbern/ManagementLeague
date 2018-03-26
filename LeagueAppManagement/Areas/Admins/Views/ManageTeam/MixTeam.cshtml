@@ -10,11 +10,11 @@
     <div ng-hide="TeamCreated">
         <div class="col-sm-6">
             <h3>Liste des joueurs disponible</h3>
-            <p ng-repeat="Player in Players"> <button class="btn btn-default {{Player.Guid}}" ng-click="TogglePalyerToList(Player)"> {{Player.FullName}}</button></p>
+            <p ng-repeat="Player in Players"> <button class="btn btn-default {{Player.Guid}}" ng-click="TogglePalyerToList(Player)"> {{Player.FullName}} ({{Player.Position.substring(0,3)}})</button></p>
         </div>
         <div class="col-sm-6">
             <h3 class="text-center">Joueurs sélectionné ({{SelectedCount}})</h3>
-            <p class="text-center" ng-repeat="Player in SelectedPlayers"> {{Player.FullName}}</p>
+            <p class="text-center" ng-repeat="Player in SelectedPlayers"> {{Player.FullName}} ({{Player.Position.substring(0,3)}})</p>
             <p class="text-center">
                 <button class="btn btn-info" ng-click="CreateTeams()">Créer les équipes</button>
             </p>
@@ -23,7 +23,7 @@
 
     <div class="col-sm-6" ng-repeat="Team in Teams">
         <h3>{{Team.Name}}</h3>
-        <p ng-repeat="Player in Team.Players"> <button class="btn btn-default {{Player.Guid}}"> {{Player.FirstName + Player.LastName}}</button></p>
+        <p ng-repeat="Player in Team.Players"> <button class="btn btn-default {{Player.Guid}}"> {{Player.FirstName + " " + Player.LastName}} ({{Player.Position.substring(0,3)}})</button></p>
     </div>
 
     <div class="col-sm-12">

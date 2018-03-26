@@ -1,4 +1,5 @@
-﻿using LeagueAppManagement.Areas.Teams.Models;
+﻿using LeagueAppManagement.Areas.Admins.Models;
+using LeagueAppManagement.Areas.Teams.Models;
 using LeagueAppManagement.Data;
 using LeagueAppManagement.Models;
 using LeagueAppManagement.Services;
@@ -28,7 +29,22 @@ namespace LeagueAppManagement.Areas.Teams.Api
 
             var teams = _creationService.CreateTeams(players, new List<Team> { new Team { Name = "Blanc" }, new Team { Name = "Orange" } });
 
-            return Ok(teams);
+            var viewModel = teams.Select(s => new TeamViewModel
+            {
+                Guid = s.Guid,
+                Name = s.Name,
+                Players = s.Players.Select(p => new PlayerViewModel
+                {
+                    FirstName = p.FirstName,
+                    Guid = p.Guid,
+                    GradeEnum = p.Grade,
+                    LastName = p.LastName,
+                    PositionEnum = p.Position,
+                    PhoneNumber = p.PhoneNumber
+                }).ToList()
+            }).ToList();
+
+            return Ok(viewModel);
         }
     }
 }
